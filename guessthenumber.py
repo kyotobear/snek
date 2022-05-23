@@ -3,8 +3,6 @@ guess the number and see how well you guess it before
 you run out of turns!
 
 use while loop to keep on going till condition is no longer met
-while loop for each try
-
 """
 
 import random
