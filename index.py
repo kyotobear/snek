@@ -1,16 +1,22 @@
-# r,p,s
 
 import random
 
-def play():
-    user = input("'r' for rock, 'p' for paper, 's' for scissors")
+def game():
+    user = input(" r, p, or s?: ")
     computer = random.choice(['r', 'p', 's'])
 
     if user == computer:
-        "it is a tie"
+        return "It is a tie! :v"
+
+    if winner(user, computer):
+        return "You won :D!!"
+
+    return "You lost :("
 
 
-def winning(player, computer):
-    if (player == "r" and computer == "s") or (player == "s" and computer == "p") or (player == "p" and computer == "r"):
-        "player beats computer with: " + player + " and computer: " + computer
-        
+def winner(player, opponent):
+    if (player == "r" and opponent == "s") or (player == "s" and opponent == "p") or (player == "p" and opponent == "r"):
+        return True
+
+
+print(game())
