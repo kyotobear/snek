@@ -29,5 +29,14 @@
 # sample input n = 5
 # sample output 120
 
+# factorial(n) = n * (n-1) * (n-2) * 
+
 def factorial(n):
-    pass
+    if n < 0:
+        return -1
+    elif n <= 1:
+        return n
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))
