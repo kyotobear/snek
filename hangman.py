@@ -25,9 +25,9 @@ word_split = split(word_choice)
 #         pass
 
 
-
-print(word_choice.replace(word_choice, len(word_choice) * "*"))
-
+word_censored = len(word_choice) * "*"
+print(word_choice.replace(word_choice, word_censored)
+print(word_choice.replace())
 
 
 
