@@ -2,25 +2,33 @@ import random
 
 from words import words
 
-
 word_choice = random.choice(words)
 print(word_choice)
-
 
 def split(word):
     return [char for char in word]
 
 word_split = split(word_choice)
 
-print(word_choice.count('e'))
 
-posit = []
-for char in range(len(word_split)):
-    if word_split[char] == "e":
-        posit.append(char)
-        print(posit)
-    else: 
-        pass
+# user_input = input("please guess a letter: ")
+
+
+# print(word_choice.count(user_input))
+
+# position = []
+# for char in range(len(word_split)):
+#     if word_split[char] == user_input:
+#         position.append(char)
+#         print(position)
+#     else: 
+#         pass
+
+
+
+print(word_choice.replace(word_choice, len(word_choice) * "*"))
+
+
 
 
 
