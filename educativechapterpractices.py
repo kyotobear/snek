@@ -104,8 +104,8 @@ sample output: True
 #     return False
 
 # def check_sum(num_list):
-#     for n1 in num_list:
-#         for n2 in num_list:
+#     for n1 in range(len(num_list):
+#         for n2 in range(len(num_list):
 #             if num_list[n1] + num_list[2] == 0:
 #                 return True
 #     return False
