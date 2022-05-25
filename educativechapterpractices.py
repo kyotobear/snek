@@ -72,8 +72,34 @@ which returns True if the brackets are balanced and False
 
  For an empty string, the function will return True.
 """
+# def check_balance(brackets): 
+#     if len(brackets) == 0:
+#         return True
+#     else:
+#         for bracket in range(len(brackets)):
+#             inside = brackets.count("]")
+#             outside = brackets.count("[")
+#             if inside == outside:
+#                 return True
+#             elif (inside > outside) or (outside > inside):
+#                 return False
+#             elif "][":
+#                 return False
 
-def check_balance(brackets):  # The argument is a string
-    pass  # Replace with your code
+# print(check_balance("[[][]]"))
 
+
+"""You must implement the check_sum() function 
+which takes in a list and returns True if the sum of two numbers in the list is zero. 
+If no such pair exists, return False.
+sample input: [10, -14, 26, 5, -3, 13, -5]
+sample output: True
+"""
+
+# def check_sum(num_list):
+#     for n1 in num_list:
+#         for n2 in num_list:
+#             if(n1 + n2 == 0):
+#                 return True
+#     return False
 
