@@ -8,15 +8,8 @@
 
 
 # rec_count(5)
-
-
-
-
-
 # Fibonacci sequence
 # 0 1 1 2 3 5 8 13
-
-from tkinter.font import names
 
 
 def fibonacci(n):
@@ -35,4 +28,7 @@ else:
     print("Fibonacci sequence:")
     for i in range(nterms):
         print(fibonacci(i))
+
+
+
 

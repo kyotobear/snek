@@ -113,3 +113,35 @@ sample output: True
 
 # num_list = [10, -14, 26, 5, -3, 13, -5]
 # print(check_sum(num_list))
+
+
+
+"""As we saw earlier, 
+the Fibonacci sequence is a series of numbers 
+where every number is the sum of the two numbers before it. The first two numbers are 
+0 and 1:
+
+0 1 1 2 3 5 8 13
+
+Input: n = 7
+Output: 8
+
+If n is negative or zero, return -1.
+"""
+
+list = []
+def fib(n):
+    num1 = 0
+    list.append(num1)
+    num2 = 1
+    i = 1
+    while i <= n:
+        sum = num1 + num2
+        num1 = num2
+        num2 = sum
+        list.append(num1)
+        i+=1
+    return list[n - 1]
+    
+
+print(fib(7))
