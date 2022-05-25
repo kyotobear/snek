@@ -172,3 +172,99 @@ print("Name:", p2.name)
 print("Team Name:", p2.teamName)
 print(p2.formerTeams)
 
+"""
+Interaction between properties
+and other objects is where methods come into play.
+
+three types of methods in Python:
+1. instance methods
+2. class methods
+3. static methods
+
+Will be discussing instance methods
+in this lesson because they are the most used 
+in Python OOP
+
+The first parameter of the method 
+should alwasy be self and which followed by the remaining
+parameters
+"""
+
+# Example of implementing methods in a class
+
+class Employee:
+    # Defining the initializer
+    def __init__(self, ID=None, salary =None, department = None):
+        self.ID = ID
+        self.salary = salary
+        self.department = department
+    
+    def tax(self):
+        return (self.salary * .2)
+
+    def salaryPerDay(self):
+        return (self.salary/30)
+
+# Initializing an object of the Employee class
+Steve = Employee(3789, 2500, "HR")
+
+# Printing the properties of Steve
+print("ID = ", Steve.ID)
+print("Salary: ", Steve.salary)
+print("Department: ", Steve.department)
+print("Tax paid by Steve: ", Steve.tax())
+print("Salary per day of Steve", Steve.salaryPerDay())
+
+
+"""
+To declare a method as a class method,
+we use the decorator 
+@classmethod. cls isued to refer to the class
+just like self is used for object of the class.
+"""
+
+class MyClass:
+    classVariable = "educative"
+
+    @classmethod
+    def demo(cls):
+        return cls.classVariable
+
+
+class Player:
+    teamName = "Liverpool"
+
+    def __init__(self, name):
+        self.name = name
+    
+    @classmethod
+    def getTeamName(cls):
+        return cls.teamName
+
+print(Player.getTeamName())
+
+"""Static methods are methods that 
+are usually limited to class only and not their
+objects. They have no direct relation to class
+variables or instance variables.
+They are used as utility functions inside the class
+or when we do not want the inherited classes. """
+
+
+"""To declare a method as a static method,
+we use the decorator @staticmethod.
+It does not use a reference to the object or class,
+so we do not have to use self or cls.
+We can pass as many arguments as we want and use this
+method to perform any function without interfering with the
+instance or class variables."""
+
+class MyClass:
+
+    @staticmethod
+    def demo()
+    print("I am a static method")
+
+p1 = Player("lol")
+p1.demo()
+Player.demo()
