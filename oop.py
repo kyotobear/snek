@@ -268,3 +268,5 @@ class MyClass:
 p1 = Player("lol")
 p1.demo()
 Player.demo()
+
+
