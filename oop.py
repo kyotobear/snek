@@ -111,3 +111,64 @@ print("Mark")
 print("ID :", Mark.ID)
 print("Salary :", Mark.salary)
 print("Department :", Mark.department)
+
+
+"""In Python,
+properties can be defined into two parts:
+- Class variables
+- Instance variables
+
+class variables are shared by all instances or objects of the classes.
+A change in the class variable will: 
+change the value of the property in 
+in all the objects of the class.
+
+Instance variables: are unique to each instance
+or object of the class.
+A change in the instance variable will change the value of the property
+in that specific object only.
+
+Class variables are defined "OUTSIDE" of the initializer
+while Instance variables are defined "INSIDE" the initializer.
+"""
+
+class Player:
+    teamName = "Liverpool" #class variables
+
+    def __init___(self, name):
+        self.name = name #creating instance variables
+
+p1 = Player("Mark")
+p2 = Player("Kist")
+
+
+print("Name:", p1.name)
+print("Team Name:", p1.teamName)
+print("Name:", p2.name)
+print("Team Name:", p2.teamName)
+
+ 
+
+#  Using class variables and instance variables
+# properly
+
+class Player:
+    teamName = 'Liverpool'  # class variables
+
+    def __init__(self, name):
+        self.name = name  # creating instance variables
+        self.formerTeams = []
+
+
+p1 = Player('Mark')
+p1.formerTeams.append('Barcelona')
+p2 = Player('Steve')
+p2.formerTeams.append('Chelsea')
+
+print("Name:", p1.name)
+print("Team Name:", p1.teamName)
+print(p1.formerTeams)
+print("Name:", p2.name)
+print("Team Name:", p2.teamName)
+print(p2.formerTeams)
+
