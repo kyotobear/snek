@@ -129,35 +129,45 @@ Output: 8
 If n is negative or zero, return -1.
 """
 
-list = []
-def fib(n):
-    num1 = 0
-    list.append(num1)
-    num2 = 1
-    i = 1
-    while i <= n:
-        sum = num1 + num2
-        num1 = num2
-        num2 = sum
-        list.append(num1)
-        i+=1
-    return list[n - 1]
+# list = []
+# def fib(n):
+#     num1 = 0
+#     list.append(num1)
+#     num2 = 1
+#     i = 1
+#     while i <= n:
+#         sum = num1 + num2
+#         num1 = num2
+#         num2 = sum
+#         list.append(num1)
+#         i+=1
+#     return list[n - 1]
     
 
-print(fib(7))
+# print(fib(7))
 
 
 # outside solution
-def fib(n):
-    a = 0
-    b = 1
-    if n == 1:
-        print(a)
-    else:
-        print(a)
-        print(b)
-        for i in range(2,n):
-            c = a + b
-            a = b
-            b = c
-            print(c)
+# def fib(n):
+#     a = 0
+#     b = 1
+#     if n == 1:
+#         print(a)
+#     else:
+#         print(a)
+#         print(b)
+#         for i in range(2,n):
+#             c = a + b
+#             a = b
+#             b = c
+#             print(c)
+
+
+"""Challenge 1: Square Numbers and Return Their Sum
+
+Implement a class Point that has three properties 
+and a method. All these attributes (properties and methods) 
+should be public. 
+This problem can be broken down into 
+two tasks:
+"""
