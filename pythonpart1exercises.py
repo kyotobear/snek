@@ -28,3 +28,15 @@ specific format """
 # color1 = color_list[0]
 # color2 = color_list[(len(color_list) - 1)]
 # print(color1,color2)
+
+"""69. Write a Python program to sort three integers without using conditional statements and loops."""
+
+
+x = int(input("1st #: "))
+y = int(input("2nd #: "))
+z = int(input("3rd #: "))
+
+a1 = min(x,y,z)
+a3 = max(x,y,z)
+a2 = (x + y + z) - a1 - a3
+print("Numbers sorted in order: ", a1, a2, a3)
