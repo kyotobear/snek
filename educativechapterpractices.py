@@ -172,18 +172,57 @@ This problem can be broken down into
 two tasks:
 """
 
-class Point:
+# class Point:
 
-    def __init__(self,x,y,z):
-        self.x = x
-        self.y = y
-        self.z = z
+#     def __init__(self,x,y,z):
+#         self.x = x
+#         self.y = y
+#         self.z = z
 
     
-    def sqSum(self):
-        return (self.x **2 ) + (self.y ** 2) + (self.z ** 2)
+#     def sqSum(self):
+#         return (self.x **2 ) + (self.y ** 2) + (self.z ** 2)
 
 
-obj1  = Point(1,3,5)  
+# obj1  = Point(1,3,5)  
 
-print(obj1.sqSum())
+# print(obj1.sqSum())
+
+
+"""
+Implement a class - Student - 
+that has four properties and two methods. All these attributes (properties and methods) should be public. This problem 
+can be broken down into three tasks.
+
+Implement a constructor to initialize the values of four properties: 
+name, phy, chem, and bio.
+
+Implement a method  totalObtained 
+ in the Student class that 
+ calculates total marks of a student.
+
+
+Using the totalObtained method, implement another method, percentage, in the Student class that calculates the percentage of students marks. Assume that the total marks of each subject are 100. The combined marks of three subjects are 300.
+
+The formula for calculating the percentage is given below.
+
+Percentage=
+Percentage=
+
+TotalMarks
+MarksObtained
+
+"""
+
+class Student:
+    def __init__(self, name, phy, chem, bio):
+        self.name = name
+        self.phy = phy
+        self.chem = chem
+        self.bio = bio
+
+    def totalObtained(self):
+        return (self.phy + self.chem + self.bio)
+
+    def percentage(self):
+        return((self.totalObtained()/300) * 100)
