@@ -291,3 +291,15 @@ class Calculator:
 # print("Roll Number:", demo1.getRollNumber())
 
 #Output: Name: Alex Roll Number: 3789
+
+
+class Account:
+    def __init__(self, title=None, balance=0):
+        self.title = title
+        self.balance = balance
+
+
+class SavingsAccount(Account):
+    def __init__(self, SavingsAccount=0):
+        super().__init__(title, balance)
+        self.SavingsAccount = SavingsAccount 
