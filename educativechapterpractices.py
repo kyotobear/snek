@@ -293,19 +293,51 @@ class Calculator:
 #Output: Name: Alex Roll Number: 3789
 
 
+# class Account:
+#     def __init__(self, title=None, balance=0):
+#         self.title = title
+#         self.balance = balance
+
+
+# class SavingsAccount(Account):
+#     def __init__(self, title=None, balance=0, interestRate=0):
+#         super().__init__(title, balance)
+#         self.interestRate = interestRate 
+
+# obj1 = SavingsAccount("Mark", 5000, 5)
+
+# print(obj1.title)
+# print(obj1.balance)
+# print(obj1.interestRate)
+
+
 class Account:
     def __init__(self, title=None, balance=0):
         self.title = title
         self.balance = balance
 
+    def withdrawal(self, amount):
+        self.balance = self.balance - amount
+
+    def deposit(self, amount):
+        # self.amount = amount
+        self.balance = self.balance + amount
+
+    def getBalance(self):
+        return self.balance
+
+
+
 
 class SavingsAccount(Account):
     def __init__(self, title=None, balance=0, interestRate=0):
         super().__init__(title, balance)
-        self.interestRate = interestRate 
+        self.interestRate = interestRate
 
-obj1 = SavingsAccount("Mark", 5000, 5)
+    def interestAmount(self):
+        interest = (self.interestRate * self.balance)/100
+        return interest 
 
-print(obj1.title)
-print(obj1.balance)
-print(obj1.interestRate)
+
+# code to test - do not edit this
+demo1 = SavingsAccount("Mark", 2000, 5)  # initializing a SavingsAccount object
