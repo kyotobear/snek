@@ -300,6 +300,12 @@ class Account:
 
 
 class SavingsAccount(Account):
-    def __init__(self, SavingsAccount=0):
+    def __init__(self, title=None, balance=0, interestRate=0):
         super().__init__(title, balance)
-        self.SavingsAccount = SavingsAccount 
+        self.interestRate = interestRate 
+
+obj1 = SavingsAccount("Mark", 5000, 5)
+
+print(obj1.title)
+print(obj1.balance)
+print(obj1.interestRate)
