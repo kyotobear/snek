@@ -1,10 +1,5 @@
-
-
-from turtle import color
-
-
 class Robot:
-    def __init__(self, name, color, weight):
+    def __init__(self, name=None, color=None, weight=0):
         self.name = name
         self.color = color
         self.weight = weight    
@@ -12,7 +7,7 @@ class Robot:
 # when function is a method of a class - add additional argumnent self 
 # add self to every method in the class
     def introduce_self(self):
-        return print("My name is " + self.name + " and I am " + self.color + " and I weigh "  + str(self.weight) + " pounds")
+        print("My name is " + self.name + " and I am " + self.color + " and I weigh "  + str(self.weight) + " pounds")
 
 
 obj1 = Robot("Nellie", "pink", 10)
