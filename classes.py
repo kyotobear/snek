@@ -8,8 +8,9 @@ class Robot:
         self.name = name
         self.color = color
         self.weight = weight    
+
     def introduce_self(self):
-        print("My name is " + self.name)
+        print("My name is " + self.name + " and I am " + self.color + " and I weigh "  + self.weight + " pounds")
 
 
         
